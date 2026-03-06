@@ -422,7 +422,7 @@ body::before {
   </div>
 
   <!-- API Key Setup -->
-  <div class="setup-card" id="setupCard">
+  <div class="setup-card" id="setupCard" style="display:none;">
     <h3>🔑 One-time Setup (takes 2 minutes!)</h3>
     <ol>
       <li>Go to <strong>console.anthropic.com</strong> and sign up free</li>
@@ -564,25 +564,9 @@ IMPORTANT: Only recommend ingredients from the above list. Never suggest somethi
 // ======================================================
 // API KEY
 // ======================================================
-let apiKey = localStorage.getItem('lemon_api_key') || '';
-if (apiKey) {
-  document.getElementById('keyOk').style.display = 'block';
-  document.getElementById('apiKey').value = '••••••••••••••••';
-}
+let apiKey = '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';
 
-function saveApiKey() {
-  const val = document.getElementById('apiKey').value.trim();
-  if (!val.startsWith('sk-ant')) {
-    document.getElementById('keyErr').style.display = 'block';
-    document.getElementById('keyOk').style.display = 'none';
-    return;
-  }
-  apiKey = val;
-  localStorage.setItem('lemon_api_key', val);
-  document.getElementById('keyOk').style.display = 'block';
-  document.getElementById('keyErr').style.display = 'none';
-  initChat();
-}
+function saveApiKey() {}
 
 // ======================================================
 // TABS
