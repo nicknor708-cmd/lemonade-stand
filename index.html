@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,126 +11,126 @@
 /* See the FLAVORS object in the JS section below */
 
 :root {
-  --sun: #FFB700;
-  --sun-deep: #E07B00;
-  --lime: #5DBB63;
-  --lime-light: #B8F0BB;
-  --pink: #FF6FA8;
-  --sky: #4FC3F7;
-  --cream: #FFFBF0;
-  --dark: #1C1C1E;
-  --card-bg: rgba(255,255,255,0.92);
-  --shadow: 0 8px 32px rgba(0,0,0,0.10);
+--sun: #FFB700;
+--sun-deep: #E07B00;
+--lime: #5DBB63;
+--lime-light: #B8F0BB;
+--pink: #FF6FA8;
+--sky: #4FC3F7;
+--cream: #FFFBF0;
+--dark: #1C1C1E;
+--card-bg: rgba(255,255,255,0.92);
+--shadow: 0 8px 32px rgba(0,0,0,0.10);
 }
 
 * { margin:0; padding:0; box-sizing:border-box; }
 
 body {
-  font-family: 'Quicksand', sans-serif;
-  background: #FFF8DC;
-  min-height: 100vh;
-  overflow-x: hidden;
+font-family: 'Quicksand', sans-serif;
+background: #FFF8DC;
+min-height: 100vh;
+overflow-x: hidden;
 }
 
 /* Sunburst background */
 body::before {
-  content: '';
-  position: fixed;
-  top: -40vw; left: 50%;
-  transform: translateX(-50%);
-  width: 160vw; height: 160vw;
-  background: conic-gradient(
-    from 0deg,
-    #FFF3A3, #FFE066, #FFF3A3, #FFE066, #FFF3A3, #FFE066,
-    #FFF3A3, #FFE066, #FFF3A3, #FFE066, #FFF3A3, #FFE066,
-    #FFF3A3, #FFE066, #FFF3A3, #FFE066
-  );
-  border-radius: 50%;
-  opacity: 0.35;
-  z-index: 0;
-  animation: spinSlow 60s linear infinite;
+content: '';
+position: fixed;
+top: -40vw; left: 50%;
+transform: translateX(-50%);
+width: 160vw; height: 160vw;
+background: conic-gradient(
+from 0deg,
+#FFF3A3, #FFE066, #FFF3A3, #FFE066, #FFF3A3, #FFE066,
+#FFF3A3, #FFE066, #FFF3A3, #FFE066, #FFF3A3, #FFE066,
+#FFF3A3, #FFE066, #FFF3A3, #FFE066
+);
+border-radius: 50%;
+opacity: 0.35;
+z-index: 0;
+animation: spinSlow 60s linear infinite;
 }
 @keyframes spinSlow { to { transform: translateX(-50%) rotate(360deg); } }
 
 .app {
-  position: relative;
-  z-index: 1;
-  max-width: 680px;
-  margin: 0 auto;
-  padding: 16px 14px 80px;
+position: relative;
+z-index: 1;
+max-width: 680px;
+margin: 0 auto;
+padding: 16px 14px 80px;
 }
 
 /* ===== HEADER ===== */
 .header {
-  text-align: center;
-  padding: 24px 0 16px;
+text-align: center;
+padding: 24px 0 16px;
 }
 .stand-sign {
-  display: inline-block;
-  background: linear-gradient(135deg, var(--sun), var(--sun-deep));
-  border-radius: 20px;
-  padding: 18px 32px;
-  box-shadow: 0 6px 0 #9B5200, var(--shadow);
-  margin-bottom: 8px;
-  border: 3px solid #fff;
+display: inline-block;
+background: linear-gradient(135deg, var(--sun), var(--sun-deep));
+border-radius: 20px;
+padding: 18px 32px;
+box-shadow: 0 6px 0 #9B5200, var(--shadow);
+margin-bottom: 8px;
+border: 3px solid #fff;
 }
 .stand-sign h1 {
-  font-family: 'Boogaloo', cursive;
-  font-size: 2.6rem;
-  color: white;
-  text-shadow: 2px 2px 0 rgba(0,0,0,0.2);
-  line-height: 1;
+font-family: 'Boogaloo', cursive;
+font-size: 2.6rem;
+color: white;
+text-shadow: 2px 2px 0 rgba(0,0,0,0.2);
+line-height: 1;
 }
 .stand-sign p {
-  font-size: 0.9rem;
-  color: rgba(255,255,255,0.9);
-  font-weight: 600;
-  margin-top: 4px;
+font-size: 0.9rem;
+color: rgba(255,255,255,0.9);
+font-weight: 600;
+margin-top: 4px;
 }
 
 /* ===== API KEY SETUP ===== */
 .setup-card {
-  background: var(--card-bg);
-  border-radius: 20px;
-  padding: 18px 20px;
-  margin: 14px 0;
-  border: 2px dashed var(--sun);
-  box-shadow: var(--shadow);
-  font-size: 0.9rem;
+background: var(--card-bg);
+border-radius: 20px;
+padding: 18px 20px;
+margin: 14px 0;
+border: 2px dashed var(--sun);
+box-shadow: var(--shadow);
+font-size: 0.9rem;
 }
 .setup-card h3 {
-  font-family: 'Boogaloo', cursive;
-  font-size: 1.2rem;
-  color: var(--sun-deep);
-  margin-bottom: 6px;
+font-family: 'Boogaloo', cursive;
+font-size: 1.2rem;
+color: var(--sun-deep);
+margin-bottom: 6px;
 }
 .setup-card ol {
-  padding-left: 18px;
-  color: #555;
-  font-weight: 600;
-  line-height: 1.8;
+padding-left: 18px;
+color: #555;
+font-weight: 600;
+line-height: 1.8;
 }
 .key-row { display: flex; gap: 8px; margin-top: 12px; }
 .key-input {
-  flex: 1;
-  padding: 11px 14px;
-  border: 2px solid var(--sun);
-  border-radius: 12px;
-  font-family: 'Quicksand', sans-serif;
-  font-size: 0.88rem;
-  font-weight: 600;
-  outline: none;
-  background: #FFFBF0;
+flex: 1;
+padding: 11px 14px;
+border: 2px solid var(--sun);
+border-radius: 12px;
+font-family: 'Quicksand', sans-serif;
+font-size: 0.88rem;
+font-weight: 600;
+outline: none;
+background: #FFFBF0;
 }
 .key-input:focus { border-color: var(--sun-deep); }
 .key-save-btn {
-  padding: 11px 18px;
-  background: var(--sun);
-  border: none; border-radius: 12px;
-  color: white; font-family: 'Quicksand', sans-serif;
-  font-weight: 700; font-size: 0.9rem;
-  cursor: pointer; transition: all 0.2s;
-  white-space: nowrap;
+padding: 11px 18px;
+background: var(--sun);
+border: none; border-radius: 12px;
+color: white; font-family: 'Quicksand', sans-serif;
+font-weight: 700; font-size: 0.9rem;
+cursor: pointer; transition: all 0.2s;
+white-space: nowrap;
 }
 .key-save-btn:hover { background: var(--sun-deep); }
 .key-ok { color: var(--lime); font-weight: 700; margin-top: 8px; font-size: 0.88rem; display: none; }
@@ -139,26 +138,26 @@ body::before {
 
 /* ===== TABS ===== */
 .tabs {
-  display: flex; gap: 8px;
-  background: rgba(255,255,255,0.7);
-  padding: 5px; border-radius: 18px;
-  margin: 12px 0;
-  border: 2px solid rgba(255,183,0,0.25);
-  backdrop-filter: blur(8px);
+display: flex; gap: 8px;
+background: rgba(255,255,255,0.7);
+padding: 5px; border-radius: 18px;
+margin: 12px 0;
+border: 2px solid rgba(255,183,0,0.25);
+backdrop-filter: blur(8px);
 }
 .tab {
-  flex: 1; padding: 12px 8px;
-  border: none; border-radius: 13px;
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 700; font-size: 0.95rem;
-  cursor: pointer; transition: all 0.25s;
-  background: transparent; color: #999;
+flex: 1; padding: 12px 8px;
+border: none; border-radius: 13px;
+font-family: 'Quicksand', sans-serif;
+font-weight: 700; font-size: 0.95rem;
+cursor: pointer; transition: all 0.25s;
+background: transparent; color: #999;
 }
 .tab.active {
-  background: linear-gradient(135deg, var(--sun), var(--sun-deep));
-  color: white;
-  box-shadow: 0 4px 14px rgba(255,183,0,0.4);
-  transform: translateY(-1px);
+background: linear-gradient(135deg, var(--sun), var(--sun-deep));
+color: white;
+box-shadow: 0 4px 14px rgba(255,183,0,0.4);
+transform: translateY(-1px);
 }
 .tab:hover:not(.active) { background: rgba(255,183,0,0.15); color: var(--dark); }
 
@@ -166,130 +165,130 @@ body::before {
 .panel { display: none; animation: slideUp 0.35s ease; }
 .panel.active { display: block; }
 @keyframes slideUp {
-  from { opacity: 0; transform: translateY(14px); }
-  to { opacity: 1; transform: translateY(0); }
+from { opacity: 0; transform: translateY(14px); }
+to { opacity: 1; transform: translateY(0); }
 }
 
 /* ===== CARD ===== */
 .card {
-  background: var(--card-bg);
-  border-radius: 22px;
-  padding: 22px 20px;
-  box-shadow: var(--shadow);
-  border: 1.5px solid rgba(255,183,0,0.2);
+background: var(--card-bg);
+border-radius: 22px;
+padding: 22px 20px;
+box-shadow: var(--shadow);
+border: 1.5px solid rgba(255,183,0,0.2);
 }
 
 /* ===== CHAT ===== */
 .chat-box {
-  min-height: 300px; max-height: 400px;
-  overflow-y: auto;
-  display: flex; flex-direction: column; gap: 12px;
-  padding: 6px 0 4px;
-  scrollbar-width: thin;
+min-height: 300px; max-height: 400px;
+overflow-y: auto;
+display: flex; flex-direction: column; gap: 12px;
+padding: 6px 0 4px;
+scrollbar-width: thin;
 }
 .msg { display: flex; gap: 10px; }
 .msg.user { flex-direction: row-reverse; }
 .avatar {
-  width: 34px; height: 34px; border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 1.1rem; flex-shrink: 0; margin-top: 2px;
+width: 34px; height: 34px; border-radius: 50%;
+display: flex; align-items: center; justify-content: center;
+font-size: 1.1rem; flex-shrink: 0; margin-top: 2px;
 }
 .msg.bot .avatar { background: linear-gradient(135deg, var(--sun), #FF8C00); }
 .msg.user .avatar { background: linear-gradient(135deg, var(--lime), #2E8B57); }
 .bubble {
-  max-width: 80%; padding: 11px 15px;
-  border-radius: 17px; font-size: 0.93rem;
-  font-weight: 600; line-height: 1.5;
+max-width: 80%; padding: 11px 15px;
+border-radius: 17px; font-size: 0.93rem;
+font-weight: 600; line-height: 1.5;
 }
 .msg.bot .bubble {
-  background: #FFF9E6; color: var(--dark);
-  border: 1.5px solid rgba(255,183,0,0.35);
-  border-bottom-left-radius: 4px;
+background: #FFF9E6; color: var(--dark);
+border: 1.5px solid rgba(255,183,0,0.35);
+border-bottom-left-radius: 4px;
 }
 .msg.user .bubble {
-  background: linear-gradient(135deg, var(--lime), #3A9E42);
-  color: white; border-bottom-right-radius: 4px;
+background: linear-gradient(135deg, var(--lime), #3A9E42);
+color: white; border-bottom-right-radius: 4px;
 }
 .quick-btns { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 12px; }
 .qbtn {
-  padding: 7px 14px;
-  border: 2px solid var(--sun-deep); border-radius: 18px;
-  background: white; color: var(--sun-deep);
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 700; font-size: 0.85rem;
-  cursor: pointer; transition: all 0.18s;
+padding: 7px 14px;
+border: 2px solid var(--sun-deep); border-radius: 18px;
+background: white; color: var(--sun-deep);
+font-family: 'Quicksand', sans-serif;
+font-weight: 700; font-size: 0.85rem;
+cursor: pointer; transition: all 0.18s;
 }
 .qbtn:hover { background: var(--sun-deep); color: white; transform: scale(1.05); }
 
 .input-row { display: flex; gap: 9px; margin-top: 14px; }
 .msg-input {
-  flex: 1; padding: 12px 15px;
-  border: 2px solid rgba(255,183,0,0.4); border-radius: 14px;
-  font-family: 'Quicksand', sans-serif; font-size: 0.93rem;
-  font-weight: 600; outline: none; background: #FFFBF0;
-  transition: border-color 0.2s;
+flex: 1; padding: 12px 15px;
+border: 2px solid rgba(255,183,0,0.4); border-radius: 14px;
+font-family: 'Quicksand', sans-serif; font-size: 0.93rem;
+font-weight: 600; outline: none; background: #FFFBF0;
+transition: border-color 0.2s;
 }
 .msg-input:focus { border-color: var(--sun); }
 .send-btn {
-  padding: 12px 18px;
-  background: linear-gradient(135deg, var(--sun), var(--sun-deep));
-  border: none; border-radius: 14px;
-  font-size: 1.2rem; cursor: pointer;
-  transition: all 0.2s;
-  box-shadow: 0 4px 12px rgba(255,183,0,0.35);
+padding: 12px 18px;
+background: linear-gradient(135deg, var(--sun), var(--sun-deep));
+border: none; border-radius: 14px;
+font-size: 1.2rem; cursor: pointer;
+transition: all 0.2s;
+box-shadow: 0 4px 12px rgba(255,183,0,0.35);
 }
 .send-btn:hover { transform: scale(1.08); }
 .send-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
 
 /* Recipe result */
 .recipe-result {
-  margin-top: 18px; display: none;
-  background: linear-gradient(135deg, #FFF3C4, #FFF9E6);
-  border: 2px solid var(--sun); border-radius: 18px;
-  padding: 18px; animation: popIn 0.45s cubic-bezier(0.175,0.885,0.32,1.275);
+margin-top: 18px; display: none;
+background: linear-gradient(135deg, #FFF3C4, #FFF9E6);
+border: 2px solid var(--sun); border-radius: 18px;
+padding: 18px; animation: popIn 0.45s cubic-bezier(0.175,0.885,0.32,1.275);
 }
 .recipe-result.show { display: block; }
 @keyframes popIn {
-  from { transform: scale(0.85); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
+from { transform: scale(0.85); opacity: 0; }
+to { transform: scale(1); opacity: 1; }
 }
 .recipe-result h3 {
-  font-family: 'Boogaloo', cursive;
-  font-size: 1.5rem; color: var(--sun-deep); margin-bottom: 8px;
+font-family: 'Boogaloo', cursive;
+font-size: 1.5rem; color: var(--sun-deep); margin-bottom: 8px;
 }
 .recipe-result p { color: var(--dark); line-height: 1.65; font-size: 0.93rem; }
 .restart-btn {
-  margin-top: 12px; padding: 9px 20px;
-  background: var(--pink); border: none; border-radius: 12px;
-  color: white; font-family: 'Quicksand', sans-serif;
-  font-weight: 700; font-size: 0.88rem; cursor: pointer;
-  transition: all 0.2s;
+margin-top: 12px; padding: 9px 20px;
+background: var(--pink); border: none; border-radius: 12px;
+color: white; font-family: 'Quicksand', sans-serif;
+font-weight: 700; font-size: 0.88rem; cursor: pointer;
+transition: all 0.2s;
 }
 .restart-btn:hover { transform: scale(1.05); filter: brightness(1.1); }
 
 /* ===== CUP ART ===== */
 .cup-form { display: flex; flex-direction: column; gap: 12px; }
 .form-label {
-  font-weight: 700; font-size: 0.88rem;
-  color: #555; text-transform: uppercase;
-  letter-spacing: 0.5px; margin-bottom: -6px;
+font-weight: 700; font-size: 0.88rem;
+color: #555; text-transform: uppercase;
+letter-spacing: 0.5px; margin-bottom: -6px;
 }
 .form-input, .form-select {
-  padding: 12px 15px;
-  border: 2px solid rgba(255,183,0,0.35); border-radius: 14px;
-  font-family: 'Quicksand', sans-serif; font-size: 0.93rem;
-  font-weight: 600; background: #FFFBF0; outline: none;
-  transition: border-color 0.2s;
+padding: 12px 15px;
+border: 2px solid rgba(255,183,0,0.35); border-radius: 14px;
+font-family: 'Quicksand', sans-serif; font-size: 0.93rem;
+font-weight: 600; background: #FFFBF0; outline: none;
+transition: border-color 0.2s;
 }
 .form-input:focus, .form-select:focus { border-color: var(--sun); }
 .gen-btn {
-  padding: 15px; margin-top: 4px;
-  background: linear-gradient(135deg, #FF6FA8, #FF3D7F);
-  border: none; border-radius: 16px; color: white;
-  font-family: 'Boogaloo', cursive; font-size: 1.25rem;
-  cursor: pointer; transition: all 0.25s;
-  box-shadow: 0 6px 18px rgba(255,61,127,0.35);
-  letter-spacing: 0.5px;
+padding: 15px; margin-top: 4px;
+background: linear-gradient(135deg, #FF6FA8, #FF3D7F);
+border: none; border-radius: 16px; color: white;
+font-family: 'Boogaloo', cursive; font-size: 1.25rem;
+cursor: pointer; transition: all 0.25s;
+box-shadow: 0 6px 18px rgba(255,61,127,0.35);
+letter-spacing: 0.5px;
 }
 .gen-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 26px rgba(255,61,127,0.45); }
 .gen-btn:disabled { opacity: 0.55; cursor: not-allowed; transform: none; }
@@ -299,223 +298,223 @@ body::before {
 .cup-out.show { display: block; animation: slideUp 0.4s ease; }
 
 .cup-preview {
-  border-radius: 20px; padding: 26px 20px;
-  text-align: center; margin-bottom: 14px;
-  border: 3px solid rgba(255,255,255,0.6);
-  box-shadow: var(--shadow); position: relative; overflow: hidden;
+border-radius: 20px; padding: 26px 20px;
+text-align: center; margin-bottom: 14px;
+border: 3px solid rgba(255,255,255,0.6);
+box-shadow: var(--shadow); position: relative; overflow: hidden;
 }
 .cup-preview::after {
-  content: '';
-  position: absolute; inset: 0;
-  background: rgba(255,255,255,0.08);
-  backdrop-filter: blur(1px);
+content: '';
+position: absolute; inset: 0;
+background: rgba(255,255,255,0.08);
+backdrop-filter: blur(1px);
 }
 .cup-emoji-big { font-size: 4.5rem; display: block; margin-bottom: 10px; position: relative; z-index: 1; }
 .cup-drink-name {
-  font-family: 'Boogaloo', cursive;
-  font-size: 1.8rem; margin-bottom: 5px;
-  position: relative; z-index: 1;
+font-family: 'Boogaloo', cursive;
+font-size: 1.8rem; margin-bottom: 5px;
+position: relative; z-index: 1;
 }
 .cup-drink-tag {
-  font-size: 0.9rem; font-weight: 700;
-  font-style: italic; opacity: 0.85;
-  position: relative; z-index: 1;
+font-size: 0.9rem; font-weight: 700;
+font-style: italic; opacity: 0.85;
+position: relative; z-index: 1;
 }
 
 .art-box {
-  background: white; border-radius: 16px;
-  padding: 16px; border: 1.5px solid rgba(255,183,0,0.25);
-  margin-bottom: 12px;
+background: white; border-radius: 16px;
+padding: 16px; border: 1.5px solid rgba(255,183,0,0.25);
+margin-bottom: 12px;
 }
 .art-box h4 {
-  font-family: 'Boogaloo', cursive;
-  font-size: 1.1rem; color: var(--pink); margin-bottom: 8px;
+font-family: 'Boogaloo', cursive;
+font-size: 1.1rem; color: var(--pink); margin-bottom: 8px;
 }
 .art-box p { color: var(--dark); line-height: 1.65; font-size: 0.91rem; }
 
 /* Print label section */
 .print-label-section {
-  background: #F0FFF4;
-  border: 2px solid var(--lime);
-  border-radius: 16px; padding: 16px;
-  margin-bottom: 12px;
+background: #F0FFF4;
+border: 2px solid var(--lime);
+border-radius: 16px; padding: 16px;
+margin-bottom: 12px;
 }
 .print-label-section h4 {
-  font-family: 'Boogaloo', cursive;
-  font-size: 1.1rem; color: var(--lime); margin-bottom: 10px;
+font-family: 'Boogaloo', cursive;
+font-size: 1.1rem; color: var(--lime); margin-bottom: 10px;
 }
 .label-preview {
-  background: white; border: 2px dashed var(--lime);
-  border-radius: 12px; padding: 14px;
-  text-align: center; margin-bottom: 12px;
-  font-size: 0.88rem;
+background: white; border: 2px dashed var(--lime);
+border-radius: 12px; padding: 14px;
+text-align: center; margin-bottom: 12px;
+font-size: 0.88rem;
 }
 .label-preview .ln { font-family: 'Boogaloo', cursive; font-size: 1.1rem; color: var(--sun-deep); }
 .label-preview .li { font-weight: 700; color: #555; font-size: 0.82rem; margin-top: 4px; }
 .label-preview .lt { font-style: italic; color: #888; font-size: 0.78rem; margin-top: 3px; }
 
 .print-btn {
-  width: 100%; padding: 12px;
-  background: var(--lime); border: none; border-radius: 12px;
-  color: white; font-family: 'Quicksand', sans-serif;
-  font-weight: 700; font-size: 0.95rem; cursor: pointer;
-  transition: all 0.2s; display: flex; align-items: center;
-  justify-content: center; gap: 8px;
+width: 100%; padding: 12px;
+background: var(--lime); border: none; border-radius: 12px;
+color: white; font-family: 'Quicksand', sans-serif;
+font-weight: 700; font-size: 0.95rem; cursor: pointer;
+transition: all 0.2s; display: flex; align-items: center;
+justify-content: center; gap: 8px;
 }
 .print-btn:hover { background: #3E9C44; transform: translateY(-1px); }
 
 .new-cup-btn {
-  padding: 9px 20px;
-  background: var(--sky); border: none; border-radius: 12px;
-  color: white; font-family: 'Quicksand', sans-serif;
-  font-weight: 700; font-size: 0.88rem; cursor: pointer;
-  transition: all 0.2s;
+padding: 9px 20px;
+background: var(--sky); border: none; border-radius: 12px;
+color: white; font-family: 'Quicksand', sans-serif;
+font-weight: 700; font-size: 0.88rem; cursor: pointer;
+transition: all 0.2s;
 }
 .new-cup-btn:hover { transform: scale(1.05); filter: brightness(1.1); }
 
 /* Typing dots */
 .typing { display: flex; gap: 4px; align-items: center; padding: 2px 0; }
 .typing span {
-  width: 8px; height: 8px; background: var(--sun-deep);
-  border-radius: 50%; animation: dot 1s ease infinite;
+width: 8px; height: 8px; background: var(--sun-deep);
+border-radius: 50%; animation: dot 1s ease infinite;
 }
 .typing span:nth-child(2) { animation-delay: 0.15s; }
 .typing span:nth-child(3) { animation-delay: 0.3s; }
 @keyframes dot {
-  0%,60%,100% { transform: translateY(0); }
-  30% { transform: translateY(-7px); }
+0%,60%,100% { transform: translateY(0); }
+30% { transform: translateY(-7px); }
 }
 
 /* Section title */
 .sec-title {
-  font-family: 'Boogaloo', cursive;
-  font-size: 1.2rem; color: var(--dark);
-  margin-bottom: 14px; display: flex;
-  align-items: center; gap: 7px;
+font-family: 'Boogaloo', cursive;
+font-size: 1.2rem; color: var(--dark);
+margin-bottom: 14px; display: flex;
+align-items: center; gap: 7px;
 }
 
 /* Print styles */
 @media print {
-  body * { visibility: hidden; }
-  .print-area, .print-area * { visibility: visible; }
-  .print-area {
-    position: absolute; top: 0; left: 0;
-    width: 100%; padding: 20px;
-  }
+body * { visibility: hidden; }
+.print-area, .print-area * { visibility: visible; }
+.print-area {
+position: absolute; top: 0; left: 0;
+width: 100%; padding: 20px;
+}
 }
 
 @media (max-width: 480px) {
-  .stand-sign h1 { font-size: 2rem; }
-  .bubble { font-size: 0.87rem; }
+.stand-sign h1 { font-size: 2rem; }
+.bubble { font-size: 0.87rem; }
 }
 </style>
 </head>
 <body>
 <div class="app">
 
-  <!-- Header -->
-  <div class="header">
-    <div class="stand-sign">
-      <h1>🍋 Nate & G's Lemon<span style="background:#1C1C1E;color:#FFD700;border-radius:6px;padding:0 5px;margin:0 2px;box-shadow:0 2px 0 rgba(0,0,0,0.4);">AI</span>de Stand</h1>
-      <p>Fresh • Fun • Powered by AI Magic ✨</p>
-    </div>
-  </div>
+<!-- Header -->
+<div class="header">
+<div class="stand-sign">
+<h1>🍋 Nate & G's Lemon<span style="background:#1C1C1E;color:#FFD700;border-radius:6px;padding:0 5px;margin:0 2px;box-shadow:0 2px 0 rgba(0,0,0,0.4);">AI</span>de Stand</h1>
+<p>Fresh • Fun • Powered by AI Magic ✨</p>
+</div>
+</div>
 
-  <!-- API Key Setup -->
-  <div class="setup-card" id="setupCard" style="display:none;">
-    <h3>🔑 One-time Setup (takes 2 minutes!)</h3>
-    <ol>
-      <li>Go to <strong>console.anthropic.com</strong> and sign up free</li>
-      <li>Click <strong>API Keys</strong> → <strong>Create Key</strong></li>
-      <li>Copy the key and paste it below</li>
-    </ol>
-    <div class="key-row">
-      <input class="key-input" id="apiKey" type="password" placeholder="sk-ant-api03-...">
-      <button class="key-save-btn" onclick="saveApiKey()">Unlock! 🔓</button>
-    </div>
-    <div class="key-ok" id="keyOk">✅ All set! AI features unlocked. Have fun! 🍋</div>
-    <div class="key-err" id="keyErr">❌ Hmm, that doesn't look right. Check your key!</div>
-  </div>
+<!-- API Key Setup -->
+<div class="setup-card" id="setupCard" style="display:none;">
+<h3>🔑 One-time Setup (takes 2 minutes!)</h3>
+<ol>
+<li>Go to <strong>console.anthropic.com</strong> and sign up free</li>
+<li>Click <strong>API Keys</strong> → <strong>Create Key</strong></li>
+<li>Copy the key and paste it below</li>
+</ol>
+<div class="key-row">
+<input class="key-input" id="apiKey" type="password" placeholder="sk-ant-api03-...">
+<button class="key-save-btn" onclick="saveApiKey()">Unlock! 🔓</button>
+</div>
+<div class="key-ok" id="keyOk">✅ All set! AI features unlocked. Have fun! 🍋</div>
+<div class="key-err" id="keyErr">❌ Hmm, that doesn't look right. Check your key!</div>
+</div>
 
-  <!-- Tabs -->
-  <div class="tabs">
-    <button class="tab active" onclick="switchTab('flavor',this)">🍹 Flavor Finder</button>
-    <button class="tab" onclick="switchTab('cup',this)">🎨 Cup Art + Label</button>
-  </div>
+<!-- Tabs -->
+<div class="tabs">
+<button class="tab active" onclick="switchTab('flavor',this)">🍹 Flavor Finder</button>
+<button class="tab" onclick="switchTab('cup',this)">🎨 Cup Art + Label</button>
+</div>
 
-  <!-- ===== FLAVOR FINDER ===== -->
-  <div class="panel active" id="panel-flavor">
-    <div class="card">
-      <div class="sec-title">🤖 Meet Lemon Bot — your flavor guide!</div>
-      <div class="chat-box" id="chatBox"></div>
-      <div class="quick-btns" id="quickBtns"></div>
-      <div class="input-row">
-        <input class="msg-input" id="msgInput" placeholder="Type your answer..." onkeydown="if(event.key==='Enter')sendMsg()">
-        <button class="send-btn" id="sendBtn" onclick="sendMsg()">➤</button>
-      </div>
-    </div>
-    <div class="recipe-result" id="recipeResult">
-      <h3>🍋 Your Perfect Lemonade!</h3>
-      <div id="recipeText"></div>
-      <button class="restart-btn" onclick="restartChat()">🔄 Start Over!</button>
-    </div>
-  </div>
+<!-- ===== FLAVOR FINDER ===== -->
+<div class="panel active" id="panel-flavor">
+<div class="card">
+<div class="sec-title">🤖 Meet Lemon Bot — your flavor guide!</div>
+<div class="chat-box" id="chatBox"></div>
+<div class="quick-btns" id="quickBtns"></div>
+<div class="input-row">
+<input class="msg-input" id="msgInput" placeholder="Type your answer..." onkeydown="if(event.key==='Enter')sendMsg()">
+<button class="send-btn" id="sendBtn" onclick="sendMsg()">➤</button>
+</div>
+</div>
+<div class="recipe-result" id="recipeResult">
+<h3>🍋 Your Perfect Lemonade!</h3>
+<div id="recipeText"></div>
+<button class="restart-btn" onclick="restartChat()">🔄 Start Over!</button>
+</div>
+</div>
 
-  <!-- ===== CUP ART + LABEL ===== -->
-  <div class="panel" id="panel-cup">
-    <div class="card">
-      <div class="sec-title">🎨 Design Your Cup!</div>
-      <div class="cup-form">
-        <div class="form-label">Your name</div>
-        <input class="form-input" id="cupName" placeholder="e.g. Sofia">
-        <div class="form-label">Your cup theme (get wild!)</div>
-        <input class="form-input" id="cupTheme" placeholder="e.g. pink unicorn surfing in outer space">
-        <div class="form-label">Color vibe</div>
-        <select class="form-select" id="cupColor">
-          <option value="bright rainbow and bold">🌈 Bright Rainbow</option>
-          <option value="cool blues purples and teal">💜 Cool & Dreamy</option>
-          <option value="fiery orange red and gold">🔥 Hot & Fiery</option>
-          <option value="fresh greens nature earth">🌿 Fresh & Earthy</option>
-          <option value="pink sparkle glitter pastel">✨ Pink & Sparkly</option>
-          <option value="dark galaxy stars night sky">🌙 Galactic Dark</option>
-        </select>
-        <div class="form-label">Your lemonade flavor (for the label)</div>
-        <input class="form-input" id="cupFlavor" placeholder="e.g. Strawberry Mint Splash">
-        <button class="gen-btn" id="genBtn" onclick="generateCup()">✨ Create My Cup Art!</button>
-      </div>
-    </div>
+<!-- ===== CUP ART + LABEL ===== -->
+<div class="panel" id="panel-cup">
+<div class="card">
+<div class="sec-title">🎨 Design Your Cup!</div>
+<div class="cup-form">
+<div class="form-label">Your name</div>
+<input class="form-input" id="cupName" placeholder="e.g. Sofia">
+<div class="form-label">Your cup theme (get wild!)</div>
+<input class="form-input" id="cupTheme" placeholder="e.g. pink unicorn surfing in outer space">
+<div class="form-label">Color vibe</div>
+<select class="form-select" id="cupColor">
+<option value="bright rainbow and bold">🌈 Bright Rainbow</option>
+<option value="cool blues purples and teal">💜 Cool & Dreamy</option>
+<option value="fiery orange red and gold">🔥 Hot & Fiery</option>
+<option value="fresh greens nature earth">🌿 Fresh & Earthy</option>
+<option value="pink sparkle glitter pastel">✨ Pink & Sparkly</option>
+<option value="dark galaxy stars night sky">🌙 Galactic Dark</option>
+</select>
+<div class="form-label">Your lemonade flavor (for the label)</div>
+<input class="form-input" id="cupFlavor" placeholder="e.g. Strawberry Mint Splash">
+<button class="gen-btn" id="genBtn" onclick="generateCup()">✨ Create My Cup Art!</button>
+</div>
+</div>
 
-    <div class="cup-out" id="cupOut">
+<div class="cup-out" id="cupOut">
 
-      <div class="cup-preview" id="cupPreview">
-        <span class="cup-emoji-big" id="cupEmoji">🍋</span>
-        <div class="cup-drink-name" id="cupDrinkName">Loading...</div>
-        <div class="cup-drink-tag" id="cupDrinkTag">Loading...</div>
-      </div>
+<div class="cup-preview" id="cupPreview">
+<span class="cup-emoji-big" id="cupEmoji">🍋</span>
+<div class="cup-drink-name" id="cupDrinkName">Loading...</div>
+<div class="cup-drink-tag" id="cupDrinkTag">Loading...</div>
+</div>
 
-      <div class="art-box">
-        <h4>🖼️ Art Description</h4>
-        <p id="artDesc">Loading...</p>
-      </div>
+<div class="art-box">
+<h4>🖼️ Art Description</h4>
+<p id="artDesc">Loading...</p>
+</div>
 
-      <div class="art-box">
-        <h4>🤖 AI Image Prompt (copy → paste into DALL·E or Canva AI)</h4>
-        <p id="aiPrompt" style="font-style:italic; color:#555;">Loading...</p>
-      </div>
+<div class="art-box">
+<h4>🤖 AI Image Prompt (copy → paste into DALL·E or Canva AI)</h4>
+<p id="aiPrompt" style="font-style:italic; color:#555;">Loading...</p>
+</div>
 
-      <div class="print-label-section">
-        <h4>🏷️ Print Your Label</h4>
-        <div class="label-preview" id="labelPreview">
-          <div class="ln" id="labelName">Cup Name</div>
-          <div class="li" id="labelIngredients">Ingredients loading...</div>
-          <div class="lt" id="labelTagline">Tagline loading...</div>
-        </div>
-        <button class="print-btn" onclick="printLabel()">🖨️ Print This Label</button>
-      </div>
+<div class="print-label-section">
+<h4>🏷️ Print Your Label</h4>
+<div class="label-preview" id="labelPreview">
+<div class="ln" id="labelName">Cup Name</div>
+<div class="li" id="labelIngredients">Ingredients loading...</div>
+<div class="lt" id="labelTagline">Tagline loading...</div>
+</div>
+<button class="print-btn" onclick="printLabel()">🖨️ Print This Label</button>
+</div>
 
-      <button class="new-cup-btn" onclick="resetCup()">🎨 Make Another!</button>
-    </div>
-  </div>
+<button class="new-cup-btn" onclick="resetCup()">🎨 Make Another!</button>
+</div>
+</div>
 
 </div><!-- /app -->
 
@@ -527,26 +526,26 @@ body::before {
 // 🍋 EDITABLE FLAVORS — Update this to match YOUR stand!
 // ======================================================
 const FLAVORS = {
-  bases: [
-    "Classic Fresh-Squeezed Lemonade",
-    "Pink Lemonade",
-    "Sparkling Lemonade (fizzy)"
-  ],
-  fruits: [
-    "Strawberry", "Watermelon", "Mango", "Peach",
-    "Raspberry", "Blueberry", "Pineapple", "Cherry"
-  ],
-  herbs_extras: [
-    "Fresh Mint", "Basil", "Honey", "Ginger",
-    "Lavender Syrup", "Vanilla", "Rose Water"
-  ],
-  sweeteners: [
-    "Regular Sugar Syrup", "Honey Syrup", "Brown Sugar Syrup"
-  ],
-  toppings: [
-    "Lemon wedge", "Fresh mint sprig", "Strawberry slice",
-    "Watermelon chunk", "Edible flower", "Candy rim"
-  ]
+bases: [
+"Classic Fresh-Squeezed Lemonade",
+"Pink Lemonade",
+"Sparkling Lemonade (fizzy)"
+],
+fruits: [
+"Strawberry", "Watermelon", "Mango", "Peach",
+"Raspberry", "Blueberry", "Pineapple", "Cherry"
+],
+herbs_extras: [
+"Fresh Mint", "Basil", "Honey", "Ginger",
+"Lavender Syrup", "Vanilla", "Rose Water"
+],
+sweeteners: [
+"Regular Sugar Syrup", "Honey Syrup", "Brown Sugar Syrup"
+],
+toppings: [
+"Lemon wedge", "Fresh mint sprig", "Strawberry slice",
+"Watermelon chunk", "Edible flower", "Candy rim"
+]
 };
 
 // Format flavors for the AI prompt
@@ -564,7 +563,7 @@ IMPORTANT: Only recommend ingredients from the above list. Never suggest somethi
 // ======================================================
 // API KEY
 // ======================================================
-let apiKey = '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';
+let apiKey = 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
 
 function saveApiKey() {}
 
@@ -572,10 +571,10 @@ function saveApiKey() {}
 // TABS
 // ======================================================
 function switchTab(id, btn) {
-  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-  document.getElementById('panel-' + id).classList.add('active');
-  btn.classList.add('active');
+document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+document.getElementById('panel-' + id).classList.add('active');
+btn.classList.add('active');
 }
 
 // ======================================================
@@ -592,7 +591,7 @@ YOUR PERSONALITY: bubbly, warm, playful, uses emojis, short sentences — like a
 QUESTION IDEAS (pick 4-5, mix it up):
 - Sweet vs sour preference
 - Favorite fruit
-- Hot day vibe (cool & refreshing vs fun & adventurous)  
+- Hot day vibe (cool & refreshing vs fun & adventurous)
 - Energy level today
 - Favorite color
 - Classic vs wild/adventurous flavor preference
@@ -601,116 +600,116 @@ QUESTION IDEAS (pick 4-5, mix it up):
 RULES:
 1. Ask ONE question at a time, react enthusiastically to each answer
 2. After 4-5 answers, say "I've cracked your flavor code!! 🎉" then give:
-   - A creative punny drink name (e.g. "The Mango Tango Twist")
-   - A recipe using ONLY ingredients from the available list
-   - A fun 1-sentence flavor description
-   - End with: "Enjoy your lemonade! 🍋" and then the word DONE
+- A creative punny drink name (e.g. "The Mango Tango Twist")
+- A recipe using ONLY ingredients from the available list
+- A fun 1-sentence flavor description
+- End with: "Enjoy your lemonade! 🍋" and then the word DONE
 3. Keep each message 2-3 sentences MAX. Be enthusiastic!
 
 ${FLAVOR_LIST}`;
 
 function initChat() {
-  chatHistory = [];
-  chatDone = false;
-  document.getElementById('chatBox').innerHTML = '';
-  document.getElementById('quickBtns').innerHTML = '';
-  document.getElementById('recipeResult').classList.remove('show');
-  if (!apiKey) {
-    addBot("Hey! 👋 I'm Zesty! Add your API key above to start finding your perfect lemonade flavor! 🍋");
-    return;
-  }
-  kickoffChat();
+chatHistory = [];
+chatDone = false;
+document.getElementById('chatBox').innerHTML = '';
+document.getElementById('quickBtns').innerHTML = '';
+document.getElementById('recipeResult').classList.remove('show');
+if (!apiKey) {
+addBot("Hey! 👋 I'm Zesty! Add your API key above to start finding your perfect lemonade flavor! 🍋");
+return;
+}
+kickoffChat();
 }
 
 async function kickoffChat() {
-  showTyping();
-  const reply = await claude(FLAVOR_SYSTEM, [{ role: 'user', content: 'Hi! Start the quiz!' }]);
-  hideTyping();
-  addBot(reply);
-  chatHistory = [
-    { role: 'user', content: 'Hi! Start the quiz!' },
-    { role: 'assistant', content: reply }
-  ];
-  showQuickReplies(['Sweet 🍬', 'Sour 🍋', 'Both!', 'Either!']);
+showTyping();
+const reply = await claude(FLAVOR_SYSTEM, [{ role: 'user', content: 'Hi! Start the quiz!' }]);
+hideTyping();
+addBot(reply);
+chatHistory = [
+{ role: 'user', content: 'Hi! Start the quiz!' },
+{ role: 'assistant', content: reply }
+];
+showQuickReplies(['Sweet 🍬', 'Sour 🍋', 'Both!', 'Either!']);
 }
 
 async function sendMsg() {
-  if (!apiKey) { alert('Add your API key first! 🔑'); return; }
-  if (chatDone) return;
-  const inp = document.getElementById('msgInput');
-  const txt = inp.value.trim();
-  if (!txt) return;
-  inp.value = '';
-  await handleSend(txt);
+if (!apiKey) { alert('Add your API key first! 🔑'); return; }
+if (chatDone) return;
+const inp = document.getElementById('msgInput');
+const txt = inp.value.trim();
+if (!txt) return;
+inp.value = '';
+await handleSend(txt);
 }
 
 async function handleSend(txt) {
-  document.getElementById('quickBtns').innerHTML = '';
-  addUser(txt);
-  chatHistory.push({ role: 'user', content: txt });
-  showTyping();
-  document.getElementById('sendBtn').disabled = true;
-  const reply = await claude(FLAVOR_SYSTEM, chatHistory);
-  hideTyping();
-  document.getElementById('sendBtn').disabled = false;
-  chatHistory.push({ role: 'assistant', content: reply });
+document.getElementById('quickBtns').innerHTML = '';
+addUser(txt);
+chatHistory.push({ role: 'user', content: txt });
+showTyping();
+document.getElementById('sendBtn').disabled = true;
+const reply = await claude(FLAVOR_SYSTEM, chatHistory);
+hideTyping();
+document.getElementById('sendBtn').disabled = false;
+chatHistory.push({ role: 'assistant', content: reply });
 
-  if (reply.includes('DONE')) {
-    const clean = reply.replace('DONE','').trim();
-    addBot(clean);
-    chatDone = true;
-    document.getElementById('recipeText').innerHTML = clean.replace(/\n/g,'<br>');
-    document.getElementById('recipeResult').classList.add('show');
-    document.getElementById('recipeResult').scrollIntoView({ behavior:'smooth', block:'nearest' });
-  } else {
-    addBot(reply);
-    // Context-aware quick replies
-    const lower = reply.toLowerCase();
-    if (lower.includes('sweet') || lower.includes('sour')) showQuickReplies(['Sweet 🍬','Sour 🍋','Both!']);
-    else if (lower.includes('fruit')) showQuickReplies(['Strawberry 🍓','Mango 🥭','Watermelon 🍉','Peach 🍑']);
-    else if (lower.includes('fizz')) showQuickReplies(['Fizzy! 🫧','Still please','Surprise me!']);
-    else if (lower.includes('energy') || lower.includes('vibe')) showQuickReplies(['Super hyper ⚡','Totally chill 😎','Somewhere between!']);
-    else if (lower.includes('color')) showQuickReplies(['Red/Pink 🩷','Yellow ☀️','Green 💚','Purple 💜','Orange 🧡']);
-    else showQuickReplies(['Yes!','No!','Maybe?','Surprise me!']);
-  }
+if (reply.includes('DONE')) {
+const clean = reply.replace('DONE','').trim();
+addBot(clean);
+chatDone = true;
+document.getElementById('recipeText').innerHTML = clean.replace(/\n/g,'<br>');
+document.getElementById('recipeResult').classList.add('show');
+document.getElementById('recipeResult').scrollIntoView({ behavior:'smooth', block:'nearest' });
+} else {
+addBot(reply);
+// Context-aware quick replies
+const lower = reply.toLowerCase();
+if (lower.includes('sweet') || lower.includes('sour')) showQuickReplies(['Sweet 🍬','Sour 🍋','Both!']);
+else if (lower.includes('fruit')) showQuickReplies(['Strawberry 🍓','Mango 🥭','Watermelon 🍉','Peach 🍑']);
+else if (lower.includes('fizz')) showQuickReplies(['Fizzy! 🫧','Still please','Surprise me!']);
+else if (lower.includes('energy') || lower.includes('vibe')) showQuickReplies(['Super hyper ⚡','Totally chill 😎','Somewhere between!']);
+else if (lower.includes('color')) showQuickReplies(['Red/Pink 🩷','Yellow ☀️','Green 💚','Purple 💜','Orange 🧡']);
+else showQuickReplies(['Yes!','No!','Maybe?','Surprise me!']);
+}
 }
 
 function showQuickReplies(opts) {
-  const c = document.getElementById('quickBtns');
-  c.innerHTML = '';
-  opts.forEach(o => {
-    const b = document.createElement('button');
-    b.className = 'qbtn'; b.textContent = o;
-    b.onclick = () => handleSend(o);
-    c.appendChild(b);
-  });
+const c = document.getElementById('quickBtns');
+c.innerHTML = '';
+opts.forEach(o => {
+const b = document.createElement('button');
+b.className = 'qbtn'; b.textContent = o;
+b.onclick = () => handleSend(o);
+c.appendChild(b);
+});
 }
 
 function addBot(text) {
-  const box = document.getElementById('chatBox');
-  const d = document.createElement('div');
-  d.className = 'msg bot';
-  d.innerHTML = `<div class="avatar">🍋</div><div class="bubble">${text.replace(/\n/g,'<br>')}</div>`;
-  box.appendChild(d);
-  box.scrollTop = box.scrollHeight;
+const box = document.getElementById('chatBox');
+const d = document.createElement('div');
+d.className = 'msg bot';
+d.innerHTML = `<div class="avatar">🍋</div><div class="bubble">${text.replace(/\n/g,'<br>')}</div>`;
+box.appendChild(d);
+box.scrollTop = box.scrollHeight;
 }
 function addUser(text) {
-  const box = document.getElementById('chatBox');
-  const d = document.createElement('div');
-  d.className = 'msg user';
-  d.innerHTML = `<div class="avatar">😊</div><div class="bubble">${text}</div>`;
-  box.appendChild(d);
-  box.scrollTop = box.scrollHeight;
+const box = document.getElementById('chatBox');
+const d = document.createElement('div');
+d.className = 'msg user';
+d.innerHTML = `<div class="avatar">😊</div><div class="bubble">${text}</div>`;
+box.appendChild(d);
+box.scrollTop = box.scrollHeight;
 }
 
 let typingNode = null;
 function showTyping() {
-  const box = document.getElementById('chatBox');
-  typingNode = document.createElement('div');
-  typingNode.className = 'msg bot'; typingNode.id = 'typing';
-  typingNode.innerHTML = `<div class="avatar">🍋</div><div class="bubble"><div class="typing"><span></span><span></span><span></span></div></div>`;
-  box.appendChild(typingNode);
-  box.scrollTop = box.scrollHeight;
+const box = document.getElementById('chatBox');
+typingNode = document.createElement('div');
+typingNode.className = 'msg bot'; typingNode.id = 'typing';
+typingNode.innerHTML = `<div class="avatar">🍋</div><div class="bubble"><div class="typing"><span></span><span></span><span></span></div></div>`;
+box.appendChild(typingNode);
+box.scrollTop = box.scrollHeight;
 }
 function hideTyping() { const t = document.getElementById('typing'); if(t) t.remove(); }
 
@@ -719,148 +718,148 @@ function restartChat() { initChat(); }
 // ======================================================
 // CUP ART
 // ======================================================
-const CUP_SYSTEM = `You are a fun creative art director for a kids' lemonade stand. 
+const CUP_SYSTEM = `You are a fun creative art director for a kids' lemonade stand.
 Given a name, theme, color vibe, and flavor, create cup sticker art details.
 
 Respond ONLY with valid JSON (no markdown fences), exactly:
 {
-  "cupName": "Fun cup name with customer name, max 5 words",
-  "tagline": "Catchy rhyming tagline, max 8 words",
-  "emoji": "2-3 matching emojis",
-  "colorLight": "#hex for light background color",
-  "colorDark": "#hex for text color on that background",
-  "artDescription": "Vivid 3-sentence description of the sticker art for an artist. Describe characters, colors, style (cute cartoon watercolor), composition, and mood.",
-  "aiPrompt": "1-2 sentence DALL-E prompt to generate the sticker. Start with 'Cute cartoon watercolor sticker of'",
-  "ingredients": "Short ingredient list: base + 2-3 add-ins, separated by • "
+"cupName": "Fun cup name with customer name, max 5 words",
+"tagline": "Catchy rhyming tagline, max 8 words",
+"emoji": "2-3 matching emojis",
+"colorLight": "#hex for light background color",
+"colorDark": "#hex for text color on that background",
+"artDescription": "Vivid 3-sentence description of the sticker art for an artist. Describe characters, colors, style (cute cartoon watercolor), composition, and mood.",
+"aiPrompt": "1-2 sentence DALL-E prompt to generate the sticker. Start with 'Cute cartoon watercolor sticker of'",
+"ingredients": "Short ingredient list: base + 2-3 add-ins, separated by • "
 }`;
 
 async function generateCup() {
-  if (!apiKey) { alert('Add your API key first! 🔑'); return; }
-  const name = document.getElementById('cupName').value.trim() || 'Mystery Customer';
-  const theme = document.getElementById('cupTheme').value.trim() || 'sunshine and rainbows';
-  const color = document.getElementById('cupColor').value;
-  const flavor = document.getElementById('cupFlavor').value.trim() || 'Lemonade Surprise';
+if (!apiKey) { alert('Add your API key first! 🔑'); return; }
+const name = document.getElementById('cupName').value.trim() || 'Mystery Customer';
+const theme = document.getElementById('cupTheme').value.trim() || 'sunshine and rainbows';
+const color = document.getElementById('cupColor').value;
+const flavor = document.getElementById('cupFlavor').value.trim() || 'Lemonade Surprise';
 
-  document.getElementById('genBtn').disabled = true;
-  document.getElementById('genBtn').textContent = '✨ Creating your cup...';
-  document.getElementById('cupOut').classList.remove('show');
+document.getElementById('genBtn').disabled = true;
+document.getElementById('genBtn').textContent = '✨ Creating your cup...';
+document.getElementById('cupOut').classList.remove('show');
 
-  const prompt = `Name: ${name}\nTheme: ${theme}\nColor vibe: ${color}\nFlavor: ${flavor}`;
-  const raw = await claude(CUP_SYSTEM, [{ role:'user', content: prompt }]);
+const prompt = `Name: ${name}\nTheme: ${theme}\nColor vibe: ${color}\nFlavor: ${flavor}`;
+const raw = await claude(CUP_SYSTEM, [{ role:'user', content: prompt }]);
 
-  document.getElementById('genBtn').disabled = false;
-  document.getElementById('genBtn').textContent = '✨ Create My Cup Art!';
+document.getElementById('genBtn').disabled = false;
+document.getElementById('genBtn').textContent = '✨ Create My Cup Art!';
 
-  let d;
-  try {
-    d = JSON.parse(raw.replace(/```json|```/g,'').trim());
-  } catch(e) {
-    alert('Oops! Try again 🍋'); console.error(raw); return;
-  }
+let d;
+try {
+d = JSON.parse(raw.replace(/```json|```/g,'').trim());
+} catch(e) {
+alert('Oops! Try again 🍋'); console.error(raw); return;
+}
 
-  document.getElementById('cupEmoji').textContent = d.emoji || '🍋';
-  document.getElementById('cupDrinkName').textContent = d.cupName || name+"'s Lemonade";
-  document.getElementById('cupDrinkTag').textContent = d.tagline || '';
-  document.getElementById('artDesc').textContent = d.artDescription || '';
-  document.getElementById('aiPrompt').textContent = d.aiPrompt || '';
+document.getElementById('cupEmoji').textContent = d.emoji || '🍋';
+document.getElementById('cupDrinkName').textContent = d.cupName || name+"'s Lemonade";
+document.getElementById('cupDrinkTag').textContent = d.tagline || '';
+document.getElementById('artDesc').textContent = d.artDescription || '';
+document.getElementById('aiPrompt').textContent = d.aiPrompt || '';
 
-  // Label preview
-  document.getElementById('labelName').textContent = d.cupName || name+"'s Lemonade";
-  document.getElementById('labelIngredients').textContent = d.ingredients || flavor;
-  document.getElementById('labelTagline').textContent = d.tagline || '';
+// Label preview
+document.getElementById('labelName').textContent = d.cupName || name+"'s Lemonade";
+document.getElementById('labelIngredients').textContent = d.ingredients || flavor;
+document.getElementById('labelTagline').textContent = d.tagline || '';
 
-  // Set preview gradient
-  const preview = document.getElementById('cupPreview');
-  preview.style.background = d.colorLight || '#FFF3C4';
-  document.getElementById('cupDrinkName').style.color = d.colorDark || '#1C1C1E';
-  document.getElementById('cupDrinkTag').style.color = d.colorDark || '#555';
+// Set preview gradient
+const preview = document.getElementById('cupPreview');
+preview.style.background = d.colorLight || '#FFF3C4';
+document.getElementById('cupDrinkName').style.color = d.colorDark || '#1C1C1E';
+document.getElementById('cupDrinkTag').style.color = d.colorDark || '#555';
 
-  document.getElementById('cupOut').classList.add('show');
-  document.getElementById('cupOut').scrollIntoView({ behavior:'smooth', block:'nearest' });
+document.getElementById('cupOut').classList.add('show');
+document.getElementById('cupOut').scrollIntoView({ behavior:'smooth', block:'nearest' });
 }
 
 function resetCup() {
-  document.getElementById('cupOut').classList.remove('show');
-  document.getElementById('cupName').value = '';
-  document.getElementById('cupTheme').value = '';
-  document.getElementById('cupFlavor').value = '';
+document.getElementById('cupOut').classList.remove('show');
+document.getElementById('cupName').value = '';
+document.getElementById('cupTheme').value = '';
+document.getElementById('cupFlavor').value = '';
 }
 
 function printLabel() {
-  const name = document.getElementById('labelName').textContent;
-  const ing = document.getElementById('labelIngredients').textContent;
-  const tag = document.getElementById('labelTagline').textContent;
-  const emoji = document.getElementById('cupEmoji').textContent;
-  const bg = document.getElementById('cupPreview').style.background;
+const name = document.getElementById('labelName').textContent;
+const ing = document.getElementById('labelIngredients').textContent;
+const tag = document.getElementById('labelTagline').textContent;
+const emoji = document.getElementById('cupEmoji').textContent;
+const bg = document.getElementById('cupPreview').style.background;
 
-  const win = window.open('', '_blank');
-  win.document.write(`
-    <!DOCTYPE html><html><head>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Boogaloo&family=Quicksand:wght@600;700&display=swap');
-      body { margin: 20px; background: white; }
-      .labels { display: flex; flex-wrap: wrap; gap: 16px; }
-      .label {
-        width: 3.5in; height: 2in;
-        background: ${bg};
-        border-radius: 16px;
-        border: 3px solid rgba(0,0,0,0.15);
-        display: flex; flex-direction: column;
-        align-items: center; justify-content: center;
-        text-align: center; padding: 12px;
-        page-break-inside: avoid;
-        font-family: 'Quicksand', sans-serif;
-      }
-      .em { font-size: 1.8rem; margin-bottom: 4px; }
-      .nm { font-family: 'Boogaloo', cursive; font-size: 1.1rem; color: #1C1C1E; margin-bottom: 2px; }
-      .ig { font-size: 0.65rem; font-weight: 700; color: #555; margin-bottom: 2px; }
-      .tg { font-size: 0.62rem; font-style: italic; color: #777; }
-      h2 { font-family:'Boogaloo',cursive; margin-bottom:12px; color:#E07B00; }
-      .tip { margin-top:20px; font-size:0.8rem; color:#888; font-family:Quicksand,sans-serif; }
-    </style></head><body>
-    <h2>🍋 Print on 4×6 label sheet or sticker paper — cut after printing!</h2>
-    <div class="labels">
-      ${[...Array(6)].map(()=>`
-        <div class="label">
-          <div class="em">${emoji}</div>
-          <div class="nm">${name}</div>
-          <div class="ig">${ing}</div>
-          <div class="tg">${tag}</div>
-        </div>`).join('')}
-    </div>
-    <div class="tip">💡 Tip: Use Avery 22826 (3.5"×2") labels or print on glossy sticker paper and cut. For round cups, try 2"×2" square labels on the side.</div>
-    <script>window.onload=()=>window.print();<\/script>
-    </body></html>
-  `);
-  win.document.close();
+const win = window.open('', '_blank');
+win.document.write(`
+<!DOCTYPE html><html><head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Boogaloo&family=Quicksand:wght@600;700&display=swap');
+body { margin: 20px; background: white; }
+.labels { display: flex; flex-wrap: wrap; gap: 16px; }
+.label {
+width: 3.5in; height: 2in;
+background: ${bg};
+border-radius: 16px;
+border: 3px solid rgba(0,0,0,0.15);
+display: flex; flex-direction: column;
+align-items: center; justify-content: center;
+text-align: center; padding: 12px;
+page-break-inside: avoid;
+font-family: 'Quicksand', sans-serif;
+}
+.em { font-size: 1.8rem; margin-bottom: 4px; }
+.nm { font-family: 'Boogaloo', cursive; font-size: 1.1rem; color: #1C1C1E; margin-bottom: 2px; }
+.ig { font-size: 0.65rem; font-weight: 700; color: #555; margin-bottom: 2px; }
+.tg { font-size: 0.62rem; font-style: italic; color: #777; }
+h2 { font-family:'Boogaloo',cursive; margin-bottom:12px; color:#E07B00; }
+.tip { margin-top:20px; font-size:0.8rem; color:#888; font-family:Quicksand,sans-serif; }
+</style></head><body>
+<h2>🍋 Print on 4×6 label sheet or sticker paper — cut after printing!</h2>
+<div class="labels">
+${[...Array(6)].map(()=>`
+<div class="label">
+<div class="em">${emoji}</div>
+<div class="nm">${name}</div>
+<div class="ig">${ing}</div>
+<div class="tg">${tag}</div>
+</div>`).join('')}
+</div>
+<div class="tip">💡 Tip: Use Avery 22826 (3.5"×2") labels or print on glossy sticker paper and cut. For round cups, try 2"×2" square labels on the side.</div>
+<script>window.onload=()=>window.print();<\/script>
+</body></html>
+`);
+win.document.close();
 }
 
 // ======================================================
 // CLAUDE API
 // ======================================================
 async function claude(system, messages) {
-  try {
-    const res = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'x-api-key': apiKey,
-        'anthropic-version': '2023-06-01',
-        'anthropic-dangerous-direct-browser-access': 'true'
-      },
-      body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
-        max_tokens: 1000,
-        system,
-        messages
-      })
-    });
-    const data = await res.json();
-    if (data.error) return '❌ API Error: ' + data.error.message;
-    return data.content?.map(b => b.text||'').join('') || 'No response';
-  } catch(e) {
-    return '❌ Network error: ' + e.message;
-  }
+try {
+const res = await fetch('https://api.anthropic.com/v1/messages', {
+method: 'POST',
+headers: {
+'Content-Type': 'application/json',
+'x-api-key': apiKey,
+'anthropic-version': '2023-06-01',
+'anthropic-dangerous-direct-browser-access': 'true'
+},
+body: JSON.stringify({
+model: 'claude-sonnet-4-20250514',
+max_tokens: 1000,
+system,
+messages
+})
+});
+const data = await res.json();
+if (data.error) return '❌ API Error: ' + data.error.message;
+return data.content?.map(b => b.text||'').join('') || 'No response';
+} catch(e) {
+return '❌ Network error: ' + e.message;
+}
 }
 
 // Init
@@ -868,3 +867,4 @@ initChat();
 </script>
 </body>
 </html>
+
