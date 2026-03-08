@@ -899,15 +899,22 @@ const FLAVOR_LIST = `AVAILABLE INGREDIENTS:
 IMPORTANT: Only recommend ingredients from this list.`;
 
 const FLAVOR_SYSTEM = `You are Lemon Bot, a super fun AI chatbot at a kids' lemonade stand in outer space! 🍋🚀
-Ask 4-5 fun personality questions ONE AT A TIME to find their perfect lemonade.
 Be bubbly, short, use emojis and space puns — like a game show host in space!
-Questions to ask (pick 4-5): sweet vs sour, favorite fruit, fizzy or still, energy level today, favorite color, classic vs wild.
-After 4-5 answers: say "I've cracked your flavor code!! 🎉" then give:
+Keep each reply 2-3 sentences MAX. React enthusiastically to each answer before asking the next question.
+
+YOU MUST ask the questions in EXACTLY this order, one at a time:
+QUESTION 1: Ask if they prefer sweet or sour flavors. (this is always your very first question)
+QUESTION 2: Ask what their favorite fruit is.
+QUESTION 3: Ask if they want their drink fizzy or still.
+QUESTION 4: Ask about their energy level today — are they hyper or chill?
+QUESTION 5: Ask what their favorite color is.
+
+After all 5 answers: say "I've cracked your flavor code!! 🎉" then give:
 - A punny space-themed drink name
 - Recipe using ONLY available ingredients
 - Fun 1-sentence description
 - End with "Enjoy! 🍋🚀" then the word DONE
-Keep each reply 2-3 sentences max. Be enthusiastic!
+
 ${FLAVOR_LIST}`;
 
 const CUP_SYSTEM = `You are a fun creative art director for a kids space lemonade stand.
@@ -950,10 +957,10 @@ function switchTab(id, btn) {
 // ============================================================
 // CHAT
 // ============================================================
-let chatHistory = [], chatDone = false;
+let chatHistory = [], chatDone = false, questionNum = 0;
 
 function initChat() {
-  chatHistory = []; chatDone = false;
+  chatHistory = []; chatDone = false; questionNum = 0;
   document.getElementById('chatBox').innerHTML = '';
   document.getElementById('quickBtns').innerHTML = '';
   document.getElementById('recipeResult').classList.remove('show');
@@ -970,6 +977,7 @@ async function startChat() {
   hideTyping();
   addBot(reply);
   chatHistory = [{ role:'user', content:'Hi! Start the quiz!' }, { role:'assistant', content:reply }];
+  questionNum = 1;
   setQuickReplies(['Sweet 🍬','Sour 🍋','Both!','Surprise me!']);
 }
 
@@ -1004,11 +1012,11 @@ async function handleMsg(txt) {
   } else {
     addBot(reply);
     const l = reply.toLowerCase();
-    if (l.includes('sweet')||l.includes('sour')) setQuickReplies(['Sweet 🍬','Sour 🍋','Both!']);
-    else if (l.includes('fruit')) setQuickReplies(['Strawberry 🍓','Mango 🥭','Watermelon 🍉','Peach 🍑']);
-    else if (l.includes('fizz')) setQuickReplies(['Fizzy! 🫧','Still please','Surprise me!']);
-    else if (l.includes('energy')||l.includes('vibe')) setQuickReplies(['Hyper ⚡','Chill 😎','In between!']);
-    else if (l.includes('color')) setQuickReplies(['Pink 🩷','Yellow ☀️','Purple 💜','Blue 💙']);
+    questionNum++;
+    if (questionNum === 2) setQuickReplies(['Strawberry 🍓','Mango 🥭','Watermelon 🍉','Peach 🍑']);
+    else if (questionNum === 3) setQuickReplies(['Fizzy! 🫧','Still please','Surprise me!']);
+    else if (questionNum === 4) setQuickReplies(['Hyper ⚡','Chill 😎','In between!']);
+    else if (questionNum === 5) setQuickReplies(['Pink 🩷','Yellow ☀️','Purple 💜','Blue 💙']);
     else setQuickReplies(['Yes! ✅','No! ❌','Surprise me! 🎲']);
   }
 }
